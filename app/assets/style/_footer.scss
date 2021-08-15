@@ -1,0 +1,27 @@
+.footer{
+    .navbar-style{
+        padding:1rem 2rem;
+        border-bottom: none;
+        
+        @include pad{
+            padding: 0;
+            margin-bottom: 0;
+            .footer-brand{
+                flex-direction: column;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+.footer-brand{
+    .navbar-brand{
+        position:relative;
+        padding:0;
+    }
+    .copyright{
+        font-size: 100%;
+        line-height:2.5;
+        padding-left:1rem;
+    }
+}
