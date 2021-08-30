@@ -1,9 +1,12 @@
-$colorMain : #E31277;
-$colorSecond: #630834;
+@import url('fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+$colorMain : #907A7B;
+$colorSecond: #F5F0E7;
+$colorThird:#C0A4A5;
 
 *{
     list-style:none;
     padding:0;
+    font-family: 'Noto Sans TC', Arial, sans-serif;
 }
 
 a{
@@ -20,14 +23,32 @@ img{
     max-width:1280px;
     width:100%;
     margin:auto;
-    @include pad{
-        padding:1rem
-    }
+}
+
+.btn{
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
 }
 
 // 標題
-@include pad{
- .page-header{
-     margin-top: 1rem !important;
- }   
+.page-title{
+    font-size:28px;
+    font-weight: 600;
+    color: $colorMain;
+} 
+
+// 按鈕
+.btn-style .btn{
+    margin:0 1rem;
+    padding:.75rem 2rem .5rem;
+    color: $colorMain;
+    background: $colorSecond;
+    border:none;
+    &:hover{
+        background: $colorMain;
+        color: $colorSecond;
+    }
 }

@@ -1,236 +1,100 @@
-.btn-wrap{
+// 右側固定
+.fixedIcon{
+    position: fixed;
+    right: 2rem;
+    top: 50%;
     li{
-        &+li{
-            margin-left:10px;
-        }
+        margin-bottom: 0.5rem;
     }
-}
-
-.btn-more{
-    border-color:white;
-    background-color:transparent;
-    color:white;
-}
-
-.jumbotron{
-    border-radius:0;
-    background-color:transparent;
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:100%;
-    padding: 8rem;
-    margin-bottom:1rem;
-    color:white;
-    h1,
-    h2{
-        font-size: 32px;
-        font-weight:bold;
-        line-height:1.5;
+    .svgColor{
+        position: relative;
+        left: 0;
+        margin-bottom: .1rem;
+        filter: drop-shadow($colorMain 80px 0);
+        -webkit-filter: drop-shadow($colorMain 80px 0);
     }
-    .lead{
-        font-weight:bold;
-        margin:1rem 0 1.5rem;
+    @include pad{
+        display: none;
     }
-    .btn{
-        padding:.5rem 2rem;
-    }
-    .form-control {
-        padding-top:1.5rem;
-        padding-bottom: 1.5rem;
-    }
-}
-
-@include pad{
-    .banner-wrap{
-        .jumbotron{
-            background-size: cover;
-            padding:10rem 2rem 2rem;
-        }
-    }
-}
-
-.link-wrap{
-  li{
-      a{
-          color:#707070;
-          @include setMinRWD(1000px){
-            padding: 0 1.25rem;
-          }
-      }
-  } 
 }
 
 // 圖文
 .card-wrap{
     margin:1rem 0;
     .card{
-        border:none;
+        border-color:$colorThird;
+        border-radius: 20px;
+        overflow: hidden;
+        color: $colorMain;
         .card-img-top{
-            height:300px;
             overflow: hidden;
             img{
                 display: block;
                 width:100%;
-                height:100%
             }
         }
         .card-body{
-            padding-left:0;
-            padding-top:5px;
-        }
-    }
-}
-
-// 直播回顧
-.video-wrap{
-    overflow: hidden;
-    .jumbotron{
-        padding:0
-    }
-    .videoText-wrap{
-        padding: 4rem 6rem;
-        background:rgba(25, 0, 20, 0.8);
-        margin-left:15px;
-    }
-    
-    @include pad{
-        .jumbotron{
-            background-size:cover
-        }
-        .videoText-wrap{
-            padding:3rem 2rem
-        }
-    }
-}
-
-// 熱門特展
-.hotShow-wrap{
-    .jumbotron{
-        background-color:#EFEFEF;
-        color:black;
-        padding:0
-    }
-    .btn-more{
-        border-color:#630834;
-        color:#630834
-    }
-    .hotShowImg-wrap{
-        .avator{
-            width:100%;
-            height:100%;
-            background-position:center;
-            background-size:cover;
-        }
-    }
-    .hotShowText-wrap{
-        padding:4rem 2rem;
-        .btn-wrap{
-            margin-top:3rem;
-        }
-    }
-    .hotShowTime-wrap{
-        ul{
-            height:100%;
-            text-align: center;
-            padding: 4rem 0;
-        }
-        .timeTxt{
             font-size: 20px;
-            font-weight:bold;
-            p{
-                margin-bottom:.5rem
+            .card-price{
+                color:$colorThird;
+            }
+
+            .card-price,
+            .card-txt{
+                margin-bottom: .75rem;
+            }
+            
+            .card-txt{
+                font-size: 16px;
             }
         }
-        .icon{
-            margin-top:auto;
+        .btn{
+            border-radius: 5px;
+            &:hover{
+                color: $colorMain;
+                background: $colorSecond;
+            }
+        }
+    }
+}
+
+// 預約內容
+.reverstationText{
+    color: $colorMain;
+}
+
+// 立即預約
+.reverstationStyle {
+    .card-wrap {
+        margin-left:2rem;
+        margin-right:2rem;
+        li{
+            margin: 1rem
         }
     }
     @include pad{
-        .row{
+        .card-wrap {
             flex-direction: column;
-        }
-        .hotShowImg-wrap {
-            .avator {
-                height: 240px;
-            }
-        }
-        .hotShowTime-wrap {
-            text-align:right;
-            ul {
-                height: auto;
-                padding: 0;
-                flex-direction: row !important;
-                padding-left:1rem
-            }
-            .timeTxt {
-                p {
-                    display:inline-block
+            .card{
+                flex-direction: row;
+                &>div{
+                    flex:1
+                }
+                .card-body{
+                    text-align: left !important;
+                }
+                .btn-style{
+                    .btn{
+                        display: block;
+                    }
                 }
             }
-            .icon{
-                margin-top: 2px;
-                margin-left:10px;
-                margin-right: 5px;
-            }
         }
-        .hotShowText-wrap {
-            padding: 1rem 2rem;
-        } 
     }
-    &.pro-hotShow-wrap{
-        .jumbotron{
-            padding: 4rem;
-            background-color: white;
-            .row{
-            }
-            .hotShowTime-wrap {
-                ul {
-                    justify-content: center;
-                    padding-top: 4rem;
-                    padding-bottom: 0;
-                }
-            }
-            &:nth-child(odd){
-                background-color: $colorSecond;
-                .row{
-                    justify-content: flex-start;
-                    color: white;
-                } 
-            }
-            &:nth-child(even){
-                color: $colorSecond;
-                .row{
-                    justify-content: flex-end;
-                } 
-            }
-            @include pad{
-                padding: 1rem 2rem;
-                .hotShowImg-wrap,
-                .hotShowText-wrap{
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-                .hotShowImg-wrap{
-                    order:-1
-                }
-                .hotShowText-wrap{
-                    order:1;
-                    padding-top: 0;
-                    padding-bottom: 0;
-                    p{  
-                        margin-bottom: 0;
-                    }
-                }
-                
-                .hotShowTime-wrap {
-                    padding: 0;
-                    ul {
-                        padding: 1rem 0 0;
-                        margin: 0;
-                        justify-content: flex-start;
-                        line-height: 1;
-                    }
-                }
+    @include mobile{
+        .card-wrap {
+            .card{
+                flex-direction: column;
             }
         }
     }

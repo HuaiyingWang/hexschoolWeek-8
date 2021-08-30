@@ -1,46 +1,40 @@
 
 .navbar-style{
-    padding:2rem 0;
-    border-bottom: 1px solid #000;
-    margin-bottom: 1rem;
+    background-color: #F5F0E7;
+    padding: 1.5rem;
     .navbar-brand{
-        flex: 1;
-        text-align: center;
-        font-size: 24px;
-        margin-right:0;
-        @include setMinRWD(992px){
-            position: absolute;
-            width: 100%;
-            z-index:0
-        }
+        max-width: 7rem;
+        margin-left: 1rem;
     }
     .navbar-nav {
         .nav-link {
             position:relative;
             padding-right: 1rem;
             padding-left: 1rem;
-            &:hover{
-                color:$colorMain
-            }
-        }
-        .badge{
-            position: absolute;
-            top:0;
-            width: 18px;
-            height: 18px;
-            padding: 0;
-            background: #E31277;
-            border-radius: 50%;
-            color: white;
-            line-height: 18px;
         }
     }
     @include setMinRWD(992px){
         .navbar-collapse{
             position:relative;
             z-index:1;
-            width: auto;
-            flex: none;
+            width: 100%;
+            justify-content: flex-end;
+            ul.navbar-link{
+                flex: 1;
+                justify-content: center;
+            }
+            ul.navbar-nav-btn{
+                li{
+                    &+li{
+                        margin-left: 1rem;
+                    }
+                }
+                .btn{
+                    &:hover{
+                        color:$colorSecond
+                    }
+                }
+            }
         }
     }
 }

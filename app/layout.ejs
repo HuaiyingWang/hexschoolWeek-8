@@ -12,9 +12,19 @@
   </head>
 
   <body>
+
+    <!-- Fix -->
+    <ul class="fixedIcon">
+      <li><a href="#"><img src="assets/images/icon-fb.png" alt=""></a></li>
+      <li><a href="#"><img src="assets/images/icon-ig.png" alt=""></a></li>
+      <li><a href="#"><img src="assets/images/icon-line.png" alt=""></a></li>
+    </ul>
+
     <div class="wrapper">
-      <nav class="navbar navbar-expand-lg navbar-light justify-content-end navbar-style">
-        <a class="navbar-brand text-colorSecond" href="#">EXHIBINECTION</a>
+      <nav class="navbar navbar-expand-lg navbar-light justify-content-between navbar-style">
+        <a class="navbar-brand text-colorSecond" href="#">
+          <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/yoga-week8/DOYOGA-logo.png" alt="">
+        </a>
   
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,18 +32,23 @@
         </button>
   
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav navbar-link">
             <li class="nav-item">
-              <a class="nav-link" href="#">Sign in</a>
+              <a class="nav-link" href="#">課程瑜珈</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sign up</a>
+              <a class="nav-link" href="#">瑜珈空間</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fas fa-stamp"></i>
-                <span class="badge badge-light">3</span>
-              </a>
+              <a class="nav-link" href="#">當月課表</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-nav-btn">
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-colorMain" href="#">立即預約</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-colorMain" href="#">聯絡我們</a>
             </li>
           </ul>
         </div>
@@ -41,41 +56,41 @@
   
       <%- contents %>
 
-    <!-- Footer banner -->
-    <div class="banner-wrap footer-banner-wrap">
-      <div class="jumbotron" style="background-image:url(https://hexschool.github.io/webLayoutTraining1st/week6/footer.jpg)">
-        <div class="row">
-          <div class="col-sm-6">
-            <h2 class="display-4">想收到展覽的最新消息嗎?<br>快訂閱我們吧</h2>
-            <div class="input-group mt-4">
-              <input type="text" class="form-control" placeholder="輸入您的電子信箱" aria-label="輸入您的電子信箱" aria-describedby="button-addon2">
+      <div class="footer-input">
+        <ul class="d-flex justify-content-between">
+          <li>
+            <h3>現在訂閱，獲得課程優惠碼！</h3>
+          </li>
+          <li>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="輸入您的電子信箱" aria-label="輸入您的電子信箱" aria-describedby="basic-addon2">
               <div class="input-group-append">
-                <button class="btn btn-colorMain" type="button" id="button-addon2">訂閱</button>
+                <span class="input-group-text" id="basic-addon2">訂閱</span>
               </div>
             </div>
-          </div>  
-        </div>
+          </li>
+        </ul>
       </div>
-    </div>
   
-      <footer class="footer">
-        <nav class="navbar navbar-expand-lg navbar-light justify-content-between navbar-style">
-          <div class="footer-brand d-flex align-content-center">
-            <h6 class="navbar-brand text-colorSecond">EXHIBINECTION</h6>
-            <small class="copyright">© 2020. All Rights Reserved.</small>
-          </div>
-    
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sign in</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sign up</a>
-              </li>
+      <footer class="footer d-flex justify-content-between">
+          <div class="footer-info">
+            <h4>
+              <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/yoga-week8/DOYOGA.png" alt="">
+            </h4>
+            <ul>
+              <li><a href="">課程介紹</a></li>
+              <li><a href="">瑜珈空間</a></li>
+              <li><a href="">當月課表</a></li>
             </ul>
           </div>
-        </nav>
+          <div class="footer-copyRight">
+            <p>© 2021. All Rights Reserved.</p>
+          </div>
+          <ul class="footer-icon d-flex">
+            <li><a href="#"><img src="https://hexschool.github.io/webLayoutTraining1st/week3/icon-fb.svg" alt=""></a></li>
+            <li><a href="#"><img src="https://hexschool.github.io/webLayoutTraining1st/week3/icon-ig.svg" alt=""></a></li>
+            <li><a href="#"><img src="https://hexschool.github.io/webLayoutTraining1st/week3/icon-line.svg" alt=""></a></li>
+          </ul>
       </footer>
     </div>
 
